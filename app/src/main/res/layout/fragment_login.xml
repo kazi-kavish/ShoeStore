@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.LoginFragment">
+
+    <!-- Require a ScrollView to handle low height in Landscape mode -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/loginScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <!-- Using constraint Layout since the labels and text-boxes need to be exactly aligned -
+            will need too many nested Linear Layouts otheriwse -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginConstraints"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app">
+
+            <Button
+                android:id="@+id/registerButton"
+                style="@style/Style_Button"
+                android:layout_width="@dimen/width_login_left_col"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_horizontal_border"
+                android:layout_marginTop="@dimen/margin_vertical"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:text="@string/register_bttn_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pwdLabelText" />
+
+        <Button
+            android:id="@+id/loginButton"
+            style="@style/Style_Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal"
+            android:layout_marginEnd="@dimen/margin_horizontal_border"
+            android:text="@string/login_bttn_label"
+            app:layout_constraintBaseline_toBaselineOf="@+id/registerButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/registerButton" />
+
+        <EditText
+            android:id="@+id/pwdEditText"
+            style="@style/Style_InputText"
+            android:layout_marginStart="@dimen/margin_horizontal"
+            android:layout_marginEnd="@dimen/margin_horizontal_border"
+            android:ems="10"
+            android:hint="@string/pwd_hint"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            app:layout_constraintBaseline_toBaselineOf="@+id/pwdLabelText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pwdLabelText" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            style="@style/Style_InputText"
+            android:layout_marginStart="@dimen/margin_horizontal"
+            android:layout_marginEnd="@dimen/margin_horizontal_border"
+            android:hint="@string/email_hint"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBaseline_toBaselineOf="@+id/emailLabelText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/emailLabelText" />
+
+        <TextView
+            android:id="@+id/emailLabelText"
+            style="@style/Style_Label"
+            android:layout_marginStart="@dimen/margin_horizontal_border"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:text="@string/email_label"
+            app:layout_constraintBottom_toTopOf="@+id/pwdLabelText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginTitleText"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/pwdLabelText"
+            style="@style/Style_Label"
+            android:layout_marginStart="@dimen/margin_horizontal_border"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:text="@string/pwd_label"
+            app:layout_constraintBottom_toTopOf="@+id/registerButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailLabelText" />
+
+            <TextView
+                android:id="@+id/loginTitleText"
+                style="@style/Style_Title"
+                android:layout_marginStart="@dimen/margin_horizontal_border"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_horizontal_border"
+                android:text="@string/login_title"
+                app:layout_constraintBottom_toTopOf="@+id/emailEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

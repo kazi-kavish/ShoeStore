@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.ShoeListFragment">
+
+    <data>
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.shoestore.models.SharedShoeViewModel" />
+    </data>
+
+    <!-- Using FrameLayout to ensure that the Floating button overlaps the ShoeList -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/shoeListScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large">
+
+            <LinearLayout
+                android:id="@+id/shoeListLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/shoeListTitleText"
+                    style="@style/Style_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shoe_list_title" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addShoeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:backgroundTint="@color/purple_200"
+            android:clickable="true"
+            android:onClick="@{() -> shoeViewModel.onAddShoe()}"
+            android:src="@android:drawable/ic_input_add"
+            app:rippleColor="@color/purple_700"
+            android:focusable="true"
+            android:contentDescription="@string/add_shoe_button_desc" />
+    </FrameLayout>
+</layout>

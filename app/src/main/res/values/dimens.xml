@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="height_shoe">100dp</dimen>
+    <dimen name="height_welcome_image">100dp</dimen>
+
+    <dimen name="width_shoe">120dp</dimen>
+    <dimen name="width_shoe_details_left_col">100dp</dimen>
+    <dimen name="width_login_left_col">100dp</dimen>
+
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="margin_new_shoe_details">4dp</dimen>
+    <dimen name="margin_card">5dp</dimen>
+    <dimen name="margin_shoe_comp">6dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_horizontal">8dp</dimen>
+    <dimen name="margin_vertical">16dp</dimen>
+    <dimen name="margin_vertical_border">32dp</dimen>
+    <dimen name="margin_horizontal_border">32dp</dimen>
+    <dimen name="margin_large">60dp</dimen>
+    <dimen name="margin_shoe_details">160dp</dimen>
+
+    <dimen name="padding_tiny">2dp</dimen>
+    <dimen name="padding_card">4dp</dimen>
+    <dimen name="padding_shoe_details">4dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_label">8dp</dimen>
+    <dimen name="padding_inputText">8dp</dimen>
+
+    <dimen name="elevation_card">5dp</dimen>
+    <dimen name="radius_corner">10dp</dimen>
+
+    <dimen name="textSize_shoe_size">14sp</dimen>
+    <dimen name="textSize_instruct">16sp</dimen>
+    <dimen name="textSize_shoe_desc">16sp</dimen>
+    <dimen name="textSize_shoeDetails_label">18sp</dimen>
+    <dimen name="textSize_label">18sp</dimen>
+    <dimen name="textSize_button">20sp</dimen>
+    <dimen name="textSize_shoe_brand">20sp</dimen>
+    <dimen name="textSize_shoe_name">22sp</dimen>
+    <dimen name="textSize_title">30sp</dimen>
+    <dimen name="elevation_appbar">5dp</dimen>
+
+    <item name="line_spacer" type="dimen" format="float">1.1</item>
+</resources>

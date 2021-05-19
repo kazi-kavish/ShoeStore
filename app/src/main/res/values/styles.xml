@@ -1,0 +1,162 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Style_Label">
+        <item name="android:layout_width">@dimen/width_login_left_col</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:padding">@dimen/padding_label</item>
+        <item name="android:textSize">@dimen/textSize_label</item>
+        <item name="android:textColor">@color/purple_700</item>
+    </style>
+
+    <style name="Style_InputText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:padding">@dimen/padding_inputText</item>
+        <item name="android:textSize">@dimen/textSize_label</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="Style_Button">
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:textSize">@dimen/textSize_button</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="Style_Title">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:padding">@dimen/padding_label</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/textSize_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ShoeDetailsStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:padding">@dimen/padding_label</item>
+        <item name="android:textSize">@dimen/textSize_label</item>
+    </style>
+
+    <style name="Style_ShoeCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin_card</item>
+        <item name="android:padding">@dimen/padding_card</item>
+    </style>
+
+    <style name="Style_ShoeDetails">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/margin_shoe_details</item>
+        <item name="android:layout_marginTop">@dimen/margin_card</item>
+        <item name="android:layout_marginEnd">@dimen/margin_card</item>
+        <item name="android:layout_marginBottom">@dimen/margin_card</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Style_ShoeImage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_card</item>
+        <item name="android:layout_marginTop">@dimen/margin_card</item>
+        <item name="android:layout_marginBottom">@dimen/margin_card</item>
+        <item name="android:background">@color/color_shoeImage</item>
+        <item name="android:padding">@dimen/padding_card</item>
+    </style>
+
+    <style name="Style_ShoeBrand">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_card</item>
+        <item name="android:layout_marginStart">@dimen/margin_card</item>
+        <item name="android:layout_marginEnd">@dimen/margin_card</item>
+        <item name="android:fontFamily">@font/arbutus</item>
+        <item name="android:padding">@dimen/padding_tiny</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/textSize_shoe_brand</item>
+    </style>
+
+    <style name="Style_ShoeName">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_new_shoe_details</item>
+        <item name="android:layout_marginTop">@dimen/margin_new_shoe_details</item>
+        <item name="android:layout_marginEnd">@dimen/margin_new_shoe_details</item>
+        <item name="android:fontFamily">@font/aclonica</item>
+        <item name="android:padding">@dimen/padding_shoe_details</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:textSize">@dimen/textSize_shoe_name</item>
+    </style>
+
+    <style name="Style_ShoeDesc">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_new_shoe_details</item>
+        <item name="android:layout_marginTop">@dimen/margin_new_shoe_details</item>
+        <item name="android:layout_marginEnd">@dimen/margin_new_shoe_details</item>
+        <item name="android:padding">@dimen/padding_shoe_details</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:textSize">@dimen/textSize_shoe_desc</item>
+    </style>
+
+    <style name="Style_ShoeSize">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_new_shoe_details</item>
+        <item name="android:layout_marginTop">@dimen/margin_new_shoe_details</item>
+        <item name="android:layout_marginEnd">@dimen/margin_new_shoe_details</item>
+        <item name="android:layout_marginBottom">@dimen/margin_card</item>
+        <item name="android:padding">@dimen/padding_shoe_details</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:textSize">@dimen/textSize_shoe_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Style_ShoeDetailsLabel">
+        <item name="android:layout_width">@dimen/width_shoe_details_left_col</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:textSize">@dimen/textSize_shoeDetails_label</item>
+    </style>
+
+    <style name="Style_ShoeDetailsInputText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_horizontal</item>
+        <item name="android:layout_marginEnd">@dimen/margin_horizontal_border</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:ems">10</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:textSize">@dimen/textSize_shoeDetails_label</item>
+    </style>
+
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.WelcomeFragment">
+
+    <!-- Require a ScrollView to handle low height in Landscape mode -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/shoeDetailsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <!-- Although this fragment's views can be easily laid out in LinearLayout -
+            the negative space would be difficult to maintain in Landscape mode - hence using ConstraintLayout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcomeConstraints"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app">
+
+            <Button
+                android:id="@+id/welcomeButton"
+                style="@style/Style_Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_horizontal_border"
+                android:layout_marginEnd="@dimen/margin_horizontal_border"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:text="@string/welcome_bttn_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcomeMssgText" />
+
+        <ImageView
+            android:id="@+id/welcomeImage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_welcome_image"
+            android:layout_marginStart="@dimen/margin_horizontal_border"
+            android:layout_marginTop="@dimen/margin_vertical_border"
+            android:layout_marginEnd="@dimen/margin_horizontal_border"
+            android:contentDescription="@string/welcome_img_desc"
+            android:scaleType="fitCenter"
+            android:src="@drawable/weclome_pic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/weclome_pic" />
+
+        <TextView
+            android:id="@+id/welcomeMssgText"
+            style="@style/Style_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal_border"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:layout_marginEnd="@dimen/margin_horizontal_border"
+            android:text="@string/welcome_message_label"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/welcomeButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTitleText" />
+
+        <TextView
+            android:id="@+id/welcomeTitleText"
+            style="@style/Style_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/welcome_title"
+            app:layout_constraintBottom_toTopOf="@+id/welcomeMssgText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

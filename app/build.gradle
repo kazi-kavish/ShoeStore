@@ -1,0 +1,84 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    // id 'kotlin-android-extensions'   // to access inflated views via synthetics
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "com.udacity.shoestore"
+        minSdkVersion 22
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        dataBinding true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        useIR = true
+    }
+}
+
+dependencies {
+    // local file tree
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Kotlin
+    implementation"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // Compatibility Libs
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+
+    // Ktx
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.fragment:fragment-ktx:1.3.3'       // required for the extension: by activityViewModels
+    //implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+
+    // Material Design
+    implementation 'com.google.android.material:material:1.3.0'
+
+    // Constraint Layout
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    // Lifecycle Extensions Lib
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    // Logging Lib
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    // Navigation
+    def nav_version = "2.3.5"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    /*
+        These Depend on the deprecated kotlin-android-extensions lib.
+        For latest - check: https://developer.android.com/jetpack/androidx/releases/navigation
+        implementation "android.arch.navigation:navigation-fragment-ktx:$version_navigation"
+        implementation "android.arch.navigation:navigation-ui-ktx:$version_navigation"
+    */
+
+    // unit testing libs
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

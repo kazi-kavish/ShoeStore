@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">The Shoe Store</string>
+
+    <!-- Login Fragment -->
+    <string name="label_login_frag">Login</string>
+    <string name="login_title">Striking Shoes</string>
+    <string name="email_label">Email</string>
+    <string name="pwd_label">Password</string>
+    <string name="register_bttn_label">Join</string>
+    <string name="email_hint">Registered Email Id</string>
+    <string name="pwd_hint">Enter Password</string>
+    <string name="login_bttn_label">Login</string>
+    <string name="err_email_pwd_required">Email and Password are mandatory fields</string>
+
+    <!-- Welcome Fragment -->
+    <string name="label_welcome_frag">Welcome</string>
+    <string name="welcome_title">Hey There!</string>
+    <string name="welcome_message_label">Strike a chord with elegance and shoe away dowdiness!</string>
+    <string name="welcome_bttn_label">Shoe me in </string>
+    <string name="welcome_img_desc">Welcome Screen Brand Logo</string>
+
+    <!-- Instructions Fragment -->
+    <string name="label_instruct_frag">Instructions</string>
+    <string name="instruct_title">Follow me</string>
+    <string name="instructions">This app has two important screens.
+        \n\n The first is the Shoe List screen. That\'s the one you will see when you click the button below. It displays all the shoes currently available in the store.
+        \n\n The the other screen lets you add your own product to the list. Simply enter a few details and click Save.
+        \n\n So, wanna proceed?</string>
+    <string name="instruct_bttn_label">Shoer!</string>
+
+    <!-- Shoe List Fragment -->
+    <string name="label_shoelist_frag">Shoes</string>
+    <string name="shoe_img_desc">Shoe Image</string>
+    <string name="shoe_list_title">Choose your Shoes</string>
+    <string name="shoe_comp_label">from %s</string>
+    <string name="shoe_size_label">Size: %d</string>
+
+    <!-- Shoe Details Fragment -->
+    <string name="label_shoedetails_frag">Add Shoe</string>
+    <string name="title_shoe_details">Tell us More</string>
+    <string name="label_name">Name</string>
+    <string name="label_size">Size</string>
+    <string name="label_brand">Brand</string>
+    <string name="label_desc">Describe</string>
+    <string name="label_cancel_button">Cancel</string>
+    <string name="label_save_button">Lace Up!</string>
+    <string name="hint_shoe_name">Name your product</string>
+    <string name="hint_shoe_size">Any standard size</string>
+    <string name="hint_shoe_brand">Product brand name</string>
+    <string name="hint_shoe_desc">Product short description</string>
+
+    <!-- Shared ViewModel  -->
+    <string name="error_missing_detail"> %s must have a proper value </string>
+    <string name="add_shoe_button_desc">Floating Add Shoe Button</string>
+
+    <!-- Overflow Menu -->
+    <string name="title_logout_item">Logout</string>
+
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.InstructionsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/instructScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/instructConstraints"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_app"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/instructButton"
+                style="@style/Style_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_horizontal_border"
+                android:layout_marginEnd="@dimen/margin_horizontal_border"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:text="@string/instruct_bttn_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instructText" />
+
+            <TextView
+                android:id="@+id/instructText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_horizontal_border"
+                android:layout_marginEnd="@dimen/margin_horizontal_border"
+                android:layout_marginBottom="@dimen/margin_vertical"
+                android:fontFamily="@font/roboto"
+                android:lineSpacingMultiplier="@dimen/line_spacer"
+                android:padding="@dimen/padding_label"
+                android:text="@string/instructions"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="@dimen/textSize_instruct"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/instructButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instructTitleText" />
+
+
+            <TextView
+                android:id="@+id/instructTitleText"
+                style="@style/Style_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/margin_horizontal_border"
+                android:layout_marginTop="@dimen/margin_vertical_border"
+                android:layout_marginEnd="@dimen/margin_horizontal_border"
+                android:text="@string/instruct_title"
+                app:layout_constraintBottom_toTopOf="@+id/instructText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

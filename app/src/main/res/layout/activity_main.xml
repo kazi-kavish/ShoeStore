@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Using Coordinator Layout and Custom Toolbar as they came pre-filled in the starter code -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/elevation_appbar"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_insetEdge="top">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:titleTextColor="@color/color_app"
+                app:subtitleTextColor="@color/color_app"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/navHost"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:navGraph="@navigation/navigation"
+            app:defaultNavHost="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_dodgeInsetEdges="top"
+            app:layout_insetEdge="bottom" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
